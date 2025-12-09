@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إتمام الدفع - eSIM V Pro</title>
+    <link rel="icon" type="image/png" href="IMAGES/ChatGPT Image 6 déc. 2025, 12_45_18.png">
+    <link rel="stylesheet" href="css/payment-page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="payment-page">
+        <!-- Header -->
+        <div class="payment-header">
+            <div class="header-left">
+                <div class="logo-container">
+                    <img src="IMAGES/ChatGPT Image 6 déc. 2025, 12_45_18.png" alt="eSIM V Pro" class="logo-image">
+                    <div class="logo-text">
+                        <div class="logo">eSIM V Pro</div>
+                        <div class="logo-subtitle">الإنترنت العالمي</div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-right">
+                <a href="index.html" class="back-btn">
+                    <i class="fas fa-arrow-right"></i>
+                    <span>العودة للرئيسية</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="payment-container">
+            <!-- Plan Details -->
+            <div class="plan-section">
+                <div class="plan-header">
+                    <h2>تفاصيل الباقة</h2>
+                </div>
+                <div class="plan-card">
+                    <img src="IMAGES/ChatGPT Image 6 déc. 2025, 12_45_18.png" alt="eSIM V Pro" class="plan-logo">
+                    <div class="plan-badge">الباقة المختارة</div>
+                    <h3 id="planName" class="plan-name">باقة 14 شهر</h3>
+                    <div class="plan-price">
+                        <span class="price-amount" id="planPrice">61</span>
+                        <span class="price-currency">USDT</span>
+                    </div>
+                    <div class="plan-features">
+                        <div class="feature-item">
+                            <i class="fas fa-globe feature-icon"></i>
+                            <span>تغطية في 89+ دولة</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-bolt feature-icon"></i>
+                            <span>إنترنت 5G/4G غير محدود</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-phone feature-icon"></i>
+                            <span>مكالمات ورسائل مجانية</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-rocket feature-icon"></i>
+                            <span>تفعيل فوري خلال دقائق</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Payment Method -->
+            <div class="payment-section">
+                <div class="section-header">
+                    <h2>طريقة الدفع</h2>
+                    <p>اختر الشبكة المناسبة لإتمام الدفع</p>
+                </div>
+
+                <div class="payment-dropdown">
+                    <div class="dropdown-header" onclick="toggleDropdown()">
+                        <div class="dropdown-selected">
+                            <div class="selected-icon">
+                                <i class="fas fa-wallet"></i>
+                            </div>
+                            <div class="selected-text">
+                                <span class="selected-title" id="selectedWallet">اختر طريقة الدفع</span>
+                                <span class="selected-subtitle">انقر للاختيار من القائمة</span>
+                            </div>
+                        </div>
+                        <i class="fas fa-chevron-down dropdown-arrow"></i>
+                    </div>
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <div class="dropdown-item" onclick="selectWallet('trc20')">
+                            <div class="item-icon"><img src="Wallet/tether-usdt-trc20.svg" style="width: 100%; height: 100%; object-fit: contain; border-radius: 14px;"></div>
+                            <div class="item-content">
+                                <div class="item-title">USDT TRC20</div>
+                                <div class="item-desc">رسوم منخفضة - تحويل سريع</div>
+                            </div>
+                            <div class="item-badge">موصى به</div>
+                        </div>
+                        <div class="dropdown-item" onclick="selectWallet('erc20')">
+                            <div class="item-icon"><img src="Wallet/3a8c9fe6-2a76-4ace-aa07-415d994de6f0.png" style="width: 100%; height: 100%; object-fit: cover; border-radius: 14px;"></div>
+                            <div class="item-content">
+                                <div class="item-title">USDT ERC20</div>
+                                <div class="item-desc">شبكة إيثيريوم - آمن</div>
+                            </div>
+                        </div>
+                        <div class="dropdown-item" onclick="selectWallet('solana')">
+                            <div class="item-icon"><img src="Wallet/bdf5066589b7865a55d6790c210dba6d.jpg" style="width: 100%; height: 100%; object-fit: cover; border-radius: 14px;"></div>
+                            <div class="item-content">
+                                <div class="item-title">USDT Solana</div>
+                                <div class="item-desc">شبكة سولانا - سريع جداً</div>
+                            </div>
+                        </div>
+                        <div class="dropdown-item disabled" style="opacity: 0.6; cursor: not-allowed;">
+                            <div class="item-icon"><i class="fas fa-credit-card" style="font-size: 28px; color: #718096;"></i></div>
+                            <div class="item-content">
+                                <div class="item-title">بطاقة بنكية</div>
+                                <div class="item-desc">Visa, Mastercard</div>
+                            </div>
+                            <div class="item-badge" style="background: linear-gradient(135deg, #f59e0b, #d97706);">قيد الإشغال</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wallet Details -->
+                <div id="walletDetails" class="wallet-details" style="display: none;">
+                    <div class="details-card">
+                        <div class="qr-section">
+                            <img id="qrCode" src="" alt="QR Code" class="qr-code">
+                            <p class="qr-label">امسح الكود للدفع</p>
+                            <div class="qr-timer">
+                                <i class="fas fa-clock"></i>
+                                <span id="qrCountdown">15:00</span>
+                            </div>
+                        </div>
+                        <div class="address-section">
+                            <label class="address-label">عنوان المحفظة</label>
+                            <div class="address-box">
+                                <input type="text" id="walletAddress" readonly class="address-input">
+                                <button onclick="copyAddress()" class="copy-btn">
+                                    <i id="copyIcon" class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                            <div class="amount-info">
+                                <span>المبلغ المطلوب:</span>
+                                <strong id="amountDisplay">61 USDT</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="instructions">
+                        <h4><i class="fas fa-exclamation-triangle"></i> تنبيه هام</h4>
+                        <div style="background: linear-gradient(135deg, #fff3cd, #ffeaa7); padding: 20px; border-radius: 12px; border-right: 4px solid #f59e0b; margin-bottom: 15px;">
+                            <p style="margin: 0; font-size: 15px; font-weight: 700; color: #d97706; line-height: 1.8;">
+                                <i class="fas fa-hand-point-left" style="margin-left: 8px;"></i>
+                                يجب إتمام الدفع أولاً لاستلام رمز QR لـ eSIM
+                            </p>
+                        </div>
+                        <h4><i class="fas fa-info-circle"></i> تعليمات الدفع</h4>
+                        <ol>
+                            <li>انسخ عنوان المحفظة أو امسح رمز QR</li>
+                            <li>أرسل المبلغ المحدد بالضبط</li>
+                            <li>انتظر التحقق من الدفع (عادة 2-5 دقائق)</li>
+                            <li>ستحصل على eSIM في صفحة مستقلة بعد التأكيد</li>
+                        </ol>
+                    </div>
+
+                    <button onclick="confirmPayment()" class="confirm-btn">
+                        <i class="fas fa-check-circle"></i>
+                        <span>تأكيد الدفع والتحقق من المعاملة</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Security Footer -->
+        <div class="security-footer">
+            <div class="security-item">
+                <i class="fas fa-lock security-icon"></i>
+                <span>دفع آمن 100%</span>
+            </div>
+            <div class="security-item">
+                <i class="fas fa-bolt security-icon"></i>
+                <span>تفعيل تلقائي</span>
+            </div>
+            <div class="security-item">
+                <i class="fas fa-headset security-icon"></i>
+                <span>دعم 24/7</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/payment-page.js"></script>
+</body>
+</html>

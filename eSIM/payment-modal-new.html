@@ -1,0 +1,112 @@
+<!-- Professional Payment Modal with Wallets -->
+<div id="planModal" class="payment-modal-overlay">
+    <div class="payment-modal-container">
+        <!-- Header -->
+        <div class="payment-modal-header">
+            <button onclick="closePlanModal()" class="payment-close-btn">&times;</button>
+            <div class="payment-icon-wrapper">💳</div>
+            <h3 id="modalTitle" class="payment-plan-title">باقة 14 شهر</h3>
+            <div class="payment-price-box">
+                <p id="modalPrice" class="payment-price">61 USDT</p>
+            </div>
+        </div>
+
+        <!-- Body -->
+        <div class="payment-modal-body">
+            <!-- Features Box -->
+            <div class="payment-features-box">
+                <h4 class="payment-features-title"><span>✨</span> مميزات الباقة</h4>
+                <div class="payment-features-grid">
+                    <div class="payment-feature-item">
+                        <span class="payment-feature-icon">🌐</span>
+                        <span class="payment-feature-text">89+ دولة</span>
+                    </div>
+                    <div class="payment-feature-item">
+                        <span class="payment-feature-icon">⚡</span>
+                        <span class="payment-feature-text">5G فائق</span>
+                    </div>
+                    <div class="payment-feature-item">
+                        <span class="payment-feature-icon">📞</span>
+                        <span class="payment-feature-text">مكالمات مجانية</span>
+                    </div>
+                    <div class="payment-feature-item">
+                        <span class="payment-feature-icon">🚀</span>
+                        <span class="payment-feature-text">تفعيل فوري</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Payment Form -->
+            <form id="paymentForm" class="payment-form">
+                <!-- Name Input -->
+                <div class="payment-input-group">
+                    <input type="text" id="nameInput" class="payment-input" placeholder="الاسم الكامل" required>
+                    <span class="payment-input-icon">👤</span>
+                </div>
+
+                <!-- Email Input -->
+                <div class="payment-input-group">
+                    <input type="email" id="emailInput" class="payment-input" placeholder="البريد الإلكتروني" required>
+                    <span class="payment-input-icon">📧</span>
+                </div>
+
+                <!-- Phone Input -->
+                <div class="payment-input-group">
+                    <input type="tel" id="phoneInput" class="payment-input" placeholder="رقم الواتساب" required>
+                    <span class="payment-input-icon">💬</span>
+                </div>
+
+                <!-- Wallets Section -->
+                <div class="payment-wallets-section">
+                    <h4 class="payment-wallets-title">اختر محفظة الدفع</h4>
+                    <div class="payment-wallets-grid">
+                        <!-- Wallet 1 -->
+                        <label class="payment-wallet-item" data-wallet="USDT TRC20">
+                            <input type="radio" name="wallet" class="payment-wallet-radio" value="usdt-trc20" required>
+                            <div class="payment-wallet-checkmark">✓</div>
+                            <img src="Wallet/TF9trqZi9pxz9hF8aZ83omqtj6SFxbfD7K.jpg" alt="USDT TRC20" class="payment-wallet-logo">
+                            <span class="payment-wallet-name">USDT TRC20</span>
+                        </label>
+
+                        <!-- Wallet 2 -->
+                        <label class="payment-wallet-item" data-wallet="USDT ERC20">
+                            <input type="radio" name="wallet" class="payment-wallet-radio" value="usdt-erc20" required>
+                            <div class="payment-wallet-checkmark">✓</div>
+                            <img src="Wallet/m4sBz5UMtD6E9JN68XRj7Apyu9prDafvVoJovfQDRSB.jpg" alt="USDT ERC20" class="payment-wallet-logo">
+                            <span class="payment-wallet-name">USDT ERC20</span>
+                        </label>
+
+                        <!-- Wallet 3 -->
+                        <label class="payment-wallet-item" data-wallet="Bitcoin">
+                            <input type="radio" name="wallet" class="payment-wallet-radio" value="bitcoin" required>
+                            <div class="payment-wallet-checkmark">✓</div>
+                            <img src="Wallet/photo_2025-12-08_11-59-05.jpg" alt="Bitcoin" class="payment-wallet-logo">
+                            <span class="payment-wallet-name">Bitcoin</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="payment-submit-btn">
+                    <span>🔒</span>
+                    <span>تأكيد الدفع الآمن</span>
+                </button>
+            </form>
+
+            <!-- Security Badges -->
+            <div class="payment-security-badges">
+                <div class="payment-security-badge">
+                    <span class="payment-security-icon" style="color: #4CAF50;">🔐</span>
+                    <span>دفع آمن 100%</span>
+                </div>
+                <div class="payment-security-badge">
+                    <span class="payment-security-icon" style="color: #2196F3;">⚡</span>
+                    <span>تفعيل فوري</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<link rel="stylesheet" href="css/payment-modal.css">
+<script src="js/payment-modal.js"></script>
