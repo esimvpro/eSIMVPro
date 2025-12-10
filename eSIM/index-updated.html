@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eSIM V Pro - الإنترنت العالمي يبدأ من هنا</title>
+    <link rel="icon" type="image/png" href="IMAGES/ChatGPT Image 6 déc. 2025, 12_45_18.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/home-countries-hero.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/how-it-works-red.css">
+    <link rel="stylesheet" href="css/testimonials-advanced.css">
+    <link rel="stylesheet" href="css/payment-modal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/ai-chatbot.css">
+</head>
+<body>
+    <!-- Navbar (keeping existing) -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <img src="IMAGES/ChatGPT Image 6 déc. 2025, 12_45_18.png" alt="eSIM V Pro">
+                    <div class="logo-text">
+                        <span class="brand-name"><span class="brand-black">eSIM</span> <span class="brand-red">V Pro</span></span>
+                        <span class="brand-subtitle">الإنترنت العالمي</span>
+                    </div>
+                </div>
+                <div class="nav-links">
+                    <a href="#features"><i class="fas fa-star"></i> المزايا</a>
+                    <a href="#plans"><i class="fas fa-box"></i> الباقات</a>
+                    <a href="#countries"><i class="fas fa-globe-americas"></i> الدول</a>
+                    <a href="#faq"><i class="fas fa-question-circle"></i> الأسئلة</a>
+                    <a href="#buy" class="btn-nav"><i class="fas fa-shopping-cart"></i> اشترِ الآن</a>
+                </div>
+                <button class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Rest of the page content remains the same until the modal -->
+    <!-- ... (keeping all existing sections) ... -->
+
+    <!-- NEW PROFESSIONAL PAYMENT MODAL -->
+    <div id="planModal" class="payment-modal-overlay">
+        <div class="payment-modal-container">
+            <div class="payment-modal-header">
+                <button onclick="closePlanModal()" class="payment-close-btn">&times;</button>
+                <div class="payment-icon-wrapper">💳</div>
+                <h3 id="modalTitle" class="payment-plan-title">باقة 14 شهر</h3>
+                <div class="payment-price-box">
+                    <p id="modalPrice" class="payment-price">61 USDT</p>
+                </div>
+            </div>
+
+            <div class="payment-modal-body">
+                <div class="payment-features-box">
+                    <h4 class="payment-features-title"><span>✨</span> مميزات الباقة</h4>
+                    <div class="payment-features-grid">
+                        <div class="payment-feature-item">
+                            <span class="payment-feature-icon">🌐</span>
+                            <span class="payment-feature-text">89+ دولة</span>
+                        </div>
+                        <div class="payment-feature-item">
+                            <span class="payment-feature-icon">⚡</span>
+                            <span class="payment-feature-text">5G فائق</span>
+                        </div>
+                        <div class="payment-feature-item">
+                            <span class="payment-feature-icon">📞</span>
+                            <span class="payment-feature-text">مكالمات مجانية</span>
+                        </div>
+                        <div class="payment-feature-item">
+                            <span class="payment-feature-icon">🚀</span>
+                            <span class="payment-feature-text">تفعيل فوري</span>
+                        </div>
+                    </div>
+                </div>
+
+                <form id="paymentForm" class="payment-form">
+                    <div class="payment-input-group">
+                        <input type="text" id="nameInput" class="payment-input" placeholder="الاسم الكامل" required>
+                        <span class="payment-input-icon">👤</span>
+                    </div>
+
+                    <div class="payment-input-group">
+                        <input type="email" id="emailInput" class="payment-input" placeholder="البريد الإلكتروني" required>
+                        <span class="payment-input-icon">📧</span>
+                    </div>
+
+                    <div class="payment-input-group">
+                        <input type="tel" id="phoneInput" class="payment-input" placeholder="رقم الواتساب" required>
+                        <span class="payment-input-icon">💬</span>
+                    </div>
+
+                    <div class="payment-wallets-section">
+                        <h4 class="payment-wallets-title">اختر محفظة الدفع</h4>
+                        <div class="payment-wallets-grid">
+                            <label class="payment-wallet-item" data-wallet="USDT TRC20">
+                                <input type="radio" name="wallet" class="payment-wallet-radio" value="usdt-trc20" required>
+                                <div class="payment-wallet-checkmark">✓</div>
+                                <img src="Wallet/TF9trqZi9pxz9hF8aZ83omqtj6SFxbfD7K.jpg" alt="USDT TRC20" class="payment-wallet-logo">
+                                <span class="payment-wallet-name">USDT TRC20</span>
+                            </label>
+
+                            <label class="payment-wallet-item" data-wallet="USDT ERC20">
+                                <input type="radio" name="wallet" class="payment-wallet-radio" value="usdt-erc20" required>
+                                <div class="payment-wallet-checkmark">✓</div>
+                                <img src="Wallet/m4sBz5UMtD6E9JN68XRj7Apyu9prDafvVoJovfQDRSB.jpg" alt="USDT ERC20" class="payment-wallet-logo">
+                                <span class="payment-wallet-name">USDT ERC20</span>
+                            </label>
+
+                            <label class="payment-wallet-item" data-wallet="Bitcoin">
+                                <input type="radio" name="wallet" class="payment-wallet-radio" value="bitcoin" required>
+                                <div class="payment-wallet-checkmark">✓</div>
+                                <img src="Wallet/photo_2025-12-08_11-59-05.jpg" alt="Bitcoin" class="payment-wallet-logo">
+                                <span class="payment-wallet-name">Bitcoin</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="payment-submit-btn">
+                        <span>🔒</span>
+                        <span>تأكيد الدفع الآمن</span>
+                    </button>
+                </form>
+
+                <div class="payment-security-badges">
+                    <div class="payment-security-badge">
+                        <span class="payment-security-icon" style="color: #4CAF50;">🔐</span>
+                        <span>دفع آمن 100%</span>
+                    </div>
+                    <div class="payment-security-badge">
+                        <span class="payment-security-icon" style="color: #2196F3;">⚡</span>
+                        <span>تفعيل فوري</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/payment-modal.js"></script>
+    <script src="js/ai-support-system.js"></script>
+    <script src="js/analytics-tracker.js"></script>
+    <script src="js/ai-chatbot-ui.js"></script>
+</body>
+</html>

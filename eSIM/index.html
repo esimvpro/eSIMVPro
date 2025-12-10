@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eSIM V Pro - الإنترنت العالمي يبدأ من هنا</title>
+    <link rel="icon" type="image/png" href="IMAGES/ChatGPT Image 6 déc. 2025, 12_45_18.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/home-countries-hero.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/how-it-works-red.css">
+    <link rel="stylesheet" href="css/testimonials-final.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
+    <!-- AI Support System -->
+    <link rel="stylesheet" href="css/ai-chatbot.css">
+    <link rel="stylesheet" href="css/payment-modal.css">
+    <link rel="stylesheet" href="css/auth-modal.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <img src="IMAGES/ChatGPT Image 6 déc. 2025, 12_45_18.png" alt="eSIM V Pro">
+                    <div class="logo-text">
+                        <span class="brand-name"><span class="brand-black">eSIM</span> <span class="brand-red">V Pro</span></span>
+                        <span class="brand-subtitle">Powered by Vodafone</span>
+                    </div>
+                </div>
+                <div class="nav-links">
+                    <a href="#features"><i class="fas fa-star"></i> المزايا</a>
+                    <a href="#plans"><i class="fas fa-box"></i> الباقات</a>
+                    <a href="#countries"><i class="fas fa-globe-americas"></i> الدول</a>
+                    <a href="#faq"><i class="fas fa-question-circle"></i> الأسئلة</a>
+                    <a href="#buy" class="btn-nav"><i class="fas fa-shopping-cart"></i> اشترِ الآن</a>
+                    <div id="userAccount" class="user-account" style="display: none;" onclick="toggleUserMenu()">
+                        <div class="user-avatar">
+                            <i class="fas fa-user-check"></i>
+                        </div>
+                        <div class="user-info">
+                            <span class="user-name" id="userName">المستخدم</span>
+                            <span class="user-status">✓ مسجل الدخول</span>
+                        </div>
+                        <i class="fas fa-chevron-down" style="font-size: 12px; color: #666; margin-right: 5px;"></i>
+                    </div>
+                    <div id="userMenu" class="user-menu" style="display: none;">
+                        <div class="user-menu-item" onclick="changeAccount()">
+                            <i class="fas fa-exchange-alt"></i>
+                            <span>تغيير الحساب</span>
+                        </div>
+                        <div class="user-menu-item logout" onclick="logout()">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>تسجيل الخروج</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero" style="background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 50%, #ffffff 100%); min-height: 70vh;">
+        <div class="container" style="display: flex; align-items: center; justify-content: center; min-height: 70vh;">
+            <div style="text-align: center;">
+                <img src="IMAGES/ChatGPT Image 6 déc. 2025, 12_39_21.png" alt="eSIM V Pro" style="max-width: 500px; width: 100%; height: auto; filter: drop-shadow(0 20px 60px rgba(230,0,0,0.2)); animation: float 6s ease-in-out infinite;">
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <i class="fas fa-chevron-down" style="color: #E60000;"></i>
+        </div>
+    </section>
+    <style>
+    @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-20px); }
+    }
+    </style>
+
+    <section id="features" class="features">
+        <div class="container">
+            <div class="features-header">
+                <span class="features-badge">لماذا تختارنا</span>
+                <h2 class="section-title">المزايا الأساسية</h2>
+                <p class="features-subtitle">تجربة اتصال عالمية متكاملة بأعلى معايير الجودة</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3>تغطية عالمية</h3>
+                    <p>أكثر من 89 دولة حول العالم</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 2v11h3v9l7-12h-4l4-8z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3>سرعة 5G فائقة</h3>
+                    <p>إنترنت فائق السرعة بتقنية 5G</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3>مكالمات ورسائل</h3>
+                    <p>دعم كامل للمكالمات والرسائل</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3>رقم بريطاني</h3>
+                    <p>رقم افتراضي من المملكة المتحدة</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 11h8V3H3v8zm2-6h4v4H5V5zm8-2v8h8V3h-8zm6 6h-4V5h4v4zM3 21h8v-8H3v8zm2-6h4v4H5v-4zm13-2h-2v3h-3v2h3v3h2v-3h3v-2h-3z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3>تفعيل فوري</h3>
+                    <p>مسح QR Code وابدأ فورًا</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3>متوافق عالميًا</h3>
+                    <p>يعمل على جميع الأجهزة الحديثة</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3>بدون عقود</h3>
+                    <p>مرونة كاملة بدون التزامات</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3>آمن ومشفر</h3>
+                    <p>حماية متقدمة لبياناتك</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-vodafone">
+        <div class="container">
+            <div class="why-content">
+                <div class="why-header">
+                    <span class="why-badge">التميز والجودة</span>
+                    <h2>لماذا <span class="brand-black">eSIM</span> <span class="brand-red">V Pro</span>؟</h2>
+                    <p class="why-text">نوفر لك خدمة eSIM عالمية متطورة مع بنية تحتية قوية تمتد عبر القارات. نقدم لك استقرارًا لا مثيل له في الاتصال، وأمانًا عاليًا للشبكة، وتجربة سلسة أينما كنت.</p>
+                </div>
+                <div class="why-stats">
+                    <div class="stat">
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3>89+</h3>
+                        <p>دولة مدعومة</p>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3>700+</h3>
+                        <p>شريك شبكة عالمي</p>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3>99.9%</h3>
+                        <p>استقرار الشبكة</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+    <section id="plans" class="plans">
+        <div class="container">
+            <div class="plans-header">
+                <span class="plans-badge">✨ الباقات والأسعار</span>
+                <h2 class="section-title">اختر باقتك المثالية</h2>
+            </div>
+            <div class="plans-grid">
+                <div class="plan-card premium">
+                    <div class="plan-logos">
+                        <img src="IMAGES/ChatGPT Image 6 déc. 2025, 12_39_21.png" alt="eSIM" class="plan-esim-logo">
+                    </div>
+                    <div class="plan-header">
+                        <h3>باقة 14 شهر</h3>
+                        <p class="plan-subtitle">مفتوحة بالكامل</p>
+                    </div>
+                    <div class="plan-price">
+                        <span class="currency">USDT</span>
+                        <span class="amount">61</span>
+                        <span class="period">/14 شهر</span>
+                    </div>
+                    <div class="plan-features">
+                        <div class="feature-highlight">
+                            <i class="fas fa-infinity"></i>
+                            <span>إنترنت غير محدود</span>
+                        </div>
+                        <ul>
+                            <li><i class="fas fa-globe-americas"></i> 89+ دولة مدعومة</li>
+                            <li><i class="fas fa-signal"></i> سرعة 5G فائقة</li>
+                            <li><i class="fas fa-phone-volume"></i> مكالمات ورسائل مجانية</li>
+                            <li><i class="fas fa-phone-square"></i> رقم بريطاني مجاني</li>
+                            <li><i class="fas fa-wifi"></i> Hotspot مدعوم</li>
+                            <li><i class="fas fa-bolt"></i> تفعيل فوري</li>
+                        </ul>
+                    </div>
+                    <a href="payment-page.html?plan=14&price=61&name=باقة 14 شهر" class="btn btn-plan">
+                        <span>اشترِ الآن</span>
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </div>
+
+                <div class="plan-card popular">
+                    <div class="plan-logos">
+                        <img src="IMAGES/ChatGPT Image 6 déc. 2025, 12_39_21.png" alt="eSIM" class="plan-esim-logo">
+                    </div>
+                    <div class="plan-header">
+                        <h3>باقة 12 شهر</h3>
+                        <p class="plan-subtitle">مفتوحة بالكامل</p>
+                    </div>
+                    <div class="plan-price">
+                        <span class="currency">USDT</span>
+                        <span class="amount">57</span>
+                        <span class="period">/12 شهر</span>
+                    </div>
+                    <div class="plan-features">
+                        <div class="feature-highlight">
+                            <i class="fas fa-infinity"></i>
+                            <span>إنترنت غير محدود</span>
+                        </div>
+                        <ul>
+                            <li><i class="fas fa-globe-americas"></i> 89+ دولة مدعومة</li>
+                            <li><i class="fas fa-signal"></i> سرعة 5G فائقة</li>
+                            <li><i class="fas fa-phone-volume"></i> مكالمات ورسائل مجانية</li>
+                            <li><i class="fas fa-phone-square"></i> رقم بريطاني مجاني</li>
+                            <li><i class="fas fa-wifi"></i> Hotspot مدعوم</li>
+                            <li><i class="fas fa-bolt"></i> تفعيل فوري</li>
+                        </ul>
+                    </div>
+                    <a href="payment-page.html?plan=12&price=57&name=باقة 12 شهر" class="btn btn-plan">
+                        <span>اشترِ الآن</span>
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </div>
+
+                <div class="plan-card">
+                    <div class="plan-logos">
+                        <img src="IMAGES/ChatGPT Image 6 déc. 2025, 12_39_21.png" alt="eSIM" class="plan-esim-logo">
+                    </div>
+                    <div class="plan-header">
+                        <h3>باقة 10 أشهر</h3>
+                        <p class="plan-subtitle">مفتوحة بالكامل</p>
+                    </div>
+                    <div class="plan-price">
+                        <span class="currency">USDT</span>
+                        <span class="amount">48</span>
+                        <span class="period">/10 أشهر</span>
+                    </div>
+                    <div class="plan-features">
+                        <div class="feature-highlight">
+                            <i class="fas fa-infinity"></i>
+                            <span>إنترنت غير محدود</span>
+                        </div>
+                        <ul>
+                            <li><i class="fas fa-globe-americas"></i> 89+ دولة مدعومة</li>
+                            <li><i class="fas fa-signal"></i> سرعة 5G فائقة</li>
+                            <li><i class="fas fa-phone-volume"></i> مكالمات ورسائل مجانية</li>
+                            <li><i class="fas fa-phone-square"></i> رقم بريطاني مجاني</li>
+                            <li><i class="fas fa-wifi"></i> Hotspot مدعوم</li>
+                            <li><i class="fas fa-bolt"></i> تفعيل فوري</li>
+                        </ul>
+                    </div>
+                    <a href="payment-page.html?plan=10&price=48&name=باقة 10 أشهر" class="btn btn-plan">
+                        <span>اشترِ الآن</span>
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </div>
+
+                <div class="plan-card">
+                    <div class="plan-logos">
+                        <img src="IMAGES/ChatGPT Image 6 déc. 2025, 12_39_21.png" alt="eSIM" class="plan-esim-logo">
+                    </div>
+                    <div class="plan-header">
+                        <h3>باقة 5 أشهر</h3>
+                        <p class="plan-subtitle">مفتوحة بالكامل</p>
+                    </div>
+                    <div class="plan-price">
+                        <span class="currency">USDT</span>
+                        <span class="amount">35</span>
+                        <span class="period">/5 أشهر</span>
+                    </div>
+                    <div class="plan-features">
+                        <div class="feature-highlight">
+                            <i class="fas fa-infinity"></i>
+                            <span>إنترنت غير محدود</span>
+                        </div>
+                        <ul>
+                            <li><i class="fas fa-globe-americas"></i> 89+ دولة مدعومة</li>
+                            <li><i class="fas fa-signal"></i> سرعة 5G فائقة</li>
+                            <li><i class="fas fa-phone-volume"></i> مكالمات ورسائل مجانية</li>
+                            <li><i class="fas fa-phone-square"></i> رقم بريطاني مجاني</li>
+                            <li><i class="fas fa-wifi"></i> Hotspot مدعوم</li>
+                            <li><i class="fas fa-bolt"></i> تفعيل فوري</li>
+                        </ul>
+                    </div>
+                    <a href="payment-page.html?plan=5&price=35&name=باقة 5 أشهر" class="btn btn-plan">
+                        <span>اشترِ الآن</span>
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="planModal" class="payment-modal-overlay">
+        <div class="payment-modal-container">
+            <div class="payment-modal-header">
+                <button onclick="closePlanModal()" class="payment-close-btn">&times;</button>
+                <div class="payment-icon-wrapper">💳</div>
+                <h3 id="modalTitle" class="payment-plan-title">باقة 14 شهر</h3>
+                <div class="payment-price-box">
+                    <p id="modalPrice" class="payment-price">61 USDT</p>
+                </div>
+            </div>
+            <div class="payment-modal-body">
+                <div class="payment-features-box">
+                    <h4 class="payment-features-title"><span>✨</span> مميزات الباقة</h4>
+                    <div class="payment-features-grid">
+                        <div class="payment-feature-item"><span class="payment-feature-icon">🌐</span><span class="payment-feature-text">89+ دولة</span></div>
+                        <div class="payment-feature-item"><span class="payment-feature-icon">⚡</span><span class="payment-feature-text">5G فائق</span></div>
+                        <div class="payment-feature-item"><span class="payment-feature-icon">📞</span><span class="payment-feature-text">مكالمات مجانية</span></div>
+                        <div class="payment-feature-item"><span class="payment-feature-icon">🚀</span><span class="payment-feature-text">تفعيل فوري</span></div>
+                    </div>
+                </div>
+                <form id="paymentForm" class="payment-form">
+                    <div class="payment-input-group"><input type="text" id="nameInput" class="payment-input" placeholder="الاسم الكامل" required><span class="payment-input-icon">👤</span></div>
+                    <div class="payment-input-group"><input type="email" id="emailInput" class="payment-input" placeholder="البريد الإلكتروني" required><span class="payment-input-icon">📧</span></div>
+                    <div class="payment-input-group"><input type="tel" id="phoneInput" class="payment-input" placeholder="رقم الواتساب" required><span class="payment-input-icon">💬</span></div>
+                    <div class="payment-wallets-section">
+                        <h4 class="payment-wallets-title">اختر محفظة الدفع</h4>
+                        <div class="payment-wallets-grid">
+                            <label class="payment-wallet-item" data-wallet="USDT TRC20"><input type="radio" name="wallet" class="payment-wallet-radio" value="usdt-trc20" required><div class="payment-wallet-checkmark">✓</div><img src="Wallet/TF9trqZi9pxz9hF8aZ83omqtj6SFxbfD7K.jpg" alt="USDT TRC20" class="payment-wallet-logo"><span class="payment-wallet-name">USDT TRC20</span></label>
+                            <label class="payment-wallet-item" data-wallet="USDT ERC20"><input type="radio" name="wallet" class="payment-wallet-radio" value="usdt-erc20" required><div class="payment-wallet-checkmark">✓</div><img src="Wallet/m4sBz5UMtD6E9JN68XRj7Apyu9prDafvVoJovfQDRSB.jpg" alt="USDT ERC20" class="payment-wallet-logo"><span class="payment-wallet-name">USDT ERC20</span></label>
+                            <label class="payment-wallet-item" data-wallet="Bitcoin"><input type="radio" name="wallet" class="payment-wallet-radio" value="bitcoin" required><div class="payment-wallet-checkmark">✓</div><img src="Wallet/photo_2025-12-08_11-59-05.jpg" alt="Bitcoin" class="payment-wallet-logo"><span class="payment-wallet-name">Bitcoin</span></label>
+                        </div>
+                    </div>
+                    <button type="submit" class="payment-submit-btn"><span>🔒</span><span>تأكيد الدفع الآمن</span></button>
+                </form>
+                <div class="payment-security-badges">
+                    <div class="payment-security-badge"><span class="payment-security-icon" style="color: #4CAF50;">🔐</span><span>دفع آمن 100%</span></div>
+                    <div class="payment-security-badge"><span class="payment-security-icon" style="color: #2196F3;">⚡</span><span>تفعيل فوري</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="countries" class="countries" style="padding: 0; background: transparent;">
+        <div class="container" style="padding: 60px 20px 0; text-align: center;">
+            <h2 class="section-title" style="font-size: 3rem; margin-bottom: 3cm;">الدول المدعومة</h2>
+            <p class="section-subtitle" style="font-size: 1.6rem; margin-bottom: 3rem; max-width: 900px; margin-left: auto; margin-right: auto; font-weight: 700;">اتصل بالعالم في ثوانٍ • 89+ دولة تنتظرك • بدون عقود أو قيود • انضم لآلاف المسافرين الأذكياء</p>
+        </div>
+        <div class="countries-hero-section">
+            <div class="hero-background">
+                <div class="hero-gradient"></div>
+                <div class="hero-mesh"></div>
+            </div>
+            <div class="container" style="position: relative; z-index: 2; text-align: center; padding: 80px 20px;">
+                <a href="pages/countries.html" class="btn btn-cta" style="display: inline-block; margin-bottom: 3rem;">
+                    <i class="fas fa-globe-americas" style="margin-left: 8px;"></i>
+                    تصفح جميع الدول المدعومة
+                </a>
+                <div class="hero-stats" style="margin: 4rem 0 0; flex-direction: column; align-items: flex-end; gap: 25px; max-width: 350px;">
+                    <div class="stat-item" style="width: 100%; padding: 25px 35px; background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,255,255,0.9)); backdrop-filter: blur(30px); border: 2px solid rgba(230,0,0,0.3); box-shadow: 0 15px 40px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,1);">
+                        <div class="stat-icon-wrapper" style="background: linear-gradient(135deg, #E60000, #990000); box-shadow: 0 8px 20px rgba(230,0,0,0.4);">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </div>
+                        <div class="stat-content">
+                            <span class="stat-number" style="font-size: 2.5rem; color: #E60000; text-shadow: 0 2px 10px rgba(230,0,0,0.3);">89+</span>
+                            <span class="stat-label" style="font-size: 1rem; letter-spacing: 1px; color: #1a1a1a; font-weight: 700;">دولة حول العالم</span>
+                        </div>
+                    </div>
+                    <div class="stat-item" style="width: 100%; padding: 25px 35px; background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,255,255,0.9)); backdrop-filter: blur(30px); border: 2px solid rgba(230,0,0,0.3); box-shadow: 0 15px 40px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,1);">
+                        <div class="stat-icon-wrapper" style="background: linear-gradient(135deg, #E60000, #990000); box-shadow: 0 8px 20px rgba(230,0,0,0.4);">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="2" y1="12" x2="22" y2="12"/>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                            </svg>
+                        </div>
+                        <div class="stat-content">
+                            <span class="stat-number" style="font-size: 2.5rem; color: #E60000; text-shadow: 0 2px 10px rgba(230,0,0,0.3);">6</span>
+                            <span class="stat-label" style="font-size: 1rem; letter-spacing: 1px; color: #1a1a1a; font-weight: 700;">قارات مختلفة</span>
+                        </div>
+                    </div>
+                    <div class="stat-item" style="width: 100%; padding: 25px 35px; background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,255,255,0.9)); backdrop-filter: blur(30px); border: 2px solid rgba(230,0,0,0.3); box-shadow: 0 15px 40px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,1);">
+                        <div class="stat-icon-wrapper" style="background: linear-gradient(135deg, #E60000, #990000); box-shadow: 0 8px 20px rgba(230,0,0,0.4);">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                        </div>
+                        <div class="stat-content">
+                            <span class="stat-number" style="font-size: 2.5rem; color: #E60000; text-shadow: 0 2px 10px rgba(230,0,0,0.3);">فوري</span>
+                            <span class="stat-label" style="font-size: 1rem; letter-spacing: 1px; color: #1a1a1a; font-weight: 700;">تفعيل فوري بثوانٍ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works" style="padding: 120px 0; background: linear-gradient(135deg, #1a1a1a 0%, #2d0000 50%, #1a1a1a 100%); position: relative; overflow: hidden;">
+        <div style="position: absolute; top: -50%; right: -10%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(230,0,0,0.2) 0%, transparent 70%); border-radius: 50%; animation: float 20s ease-in-out infinite;"></div>
+        <div style="position: absolute; bottom: -30%; left: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(230,0,0,0.15) 0%, transparent 70%); border-radius: 50%; animation: float 25s ease-in-out infinite reverse;"></div>
+        <div class="container" style="position: relative; z-index: 1;">
+            <div style="text-align: center; margin-bottom: 80px;">
+                <span style="display: inline-block; background: linear-gradient(135deg, rgba(230,0,0,0.2) 0%, rgba(230,0,0,0.1) 100%); color: #E60000; padding: 12px 35px; border-radius: 50px; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 25px; border: 2px solid rgba(230,0,0,0.4); box-shadow: 0 4px 15px rgba(230,0,0,0.3);">⚡ بسيط وسريع</span>
+                <h2 style="font-size: 3.5rem; font-weight: 900; color: white; margin-bottom: 20px; background: linear-gradient(135deg, #E60000 0%, #ffffff 50%, #E60000 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">كيف تبدأ في 3 خطوات؟</h2>
+                <p style="font-size: 1.3rem; color: rgba(255,255,255,0.8); max-width: 700px; margin: 0 auto;">اتصل بالعالم في أقل من 5 دقائق • بدون تعقيدات</p>
+            </div>
+            <div style="display: flex; justify-content: center; align-items: stretch; gap: 30px; max-width: 1200px; margin: 0 auto;">
+                <div style="flex: 1; background: linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02)); backdrop-filter: blur(20px); padding: 50px 40px; border-radius: 30px; text-align: center; border: 2px solid rgba(255,215,0,0.3); box-shadow: 0 20px 60px rgba(0,0,0,0.4); position: relative; transition: all 0.4s;">
+                    <div style="position: absolute; top: -25px; left: 50%; transform: translateX(-50%); width: 60px; height: 60px; background: linear-gradient(135deg, #E60000 0%, #990000 100%); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; font-weight: 900; box-shadow: 0 10px 30px rgba(230,0,0,0.6);">1</div>
+                    <div style="width: 140px; height: 140px; background: conic-gradient(from 0deg at 50% 50%, rgba(230,0,0,0.4) 0deg, rgba(150,0,0,0.4) 120deg, rgba(230,0,0,0.4) 240deg, rgba(150,0,0,0.4) 360deg); border-radius: 35px; display: flex; align-items: center; justify-content: center; margin: 30px auto 30px; box-shadow: 0 20px 60px rgba(230,0,0,0.5), 0 0 80px rgba(230,0,0,0.3), inset 0 3px 15px rgba(255,255,255,0.3); position: relative; overflow: hidden; transform: perspective(1000px) rotateY(0deg); transition: all 0.6s;">
+                        <div style="position: absolute; inset: -50%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent); animation: shine 4s linear infinite;"></div>
+                        <div style="position: absolute; inset: 0; background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.4), transparent 50%); border-radius: 35px;"></div>
+                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" style="position: relative; z-index: 2; filter: drop-shadow(0 8px 20px rgba(230,0,0,0.6));">
+                            <path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z" fill="url(#grad1)"/>
+                            <defs><linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#E60000;stop-opacity:1" /><stop offset="100%" style="stop-color:#FFF;stop-opacity:1" /></linearGradient></defs>
+                        </svg>
+                    </div>
+                    <h3 style="font-size: 1.8rem; font-weight: 800; color: white; margin-bottom: 15px; text-shadow: 0 2px 10px rgba(255,215,0,0.3);">اختر باقتك</h3>
+                    <p style="color: rgba(255,255,255,0.8); font-size: 1.1rem; line-height: 1.8;">تصفح الباقات واختر المدة المناسبة لاحتياجاتك</p>
+                </div>
+                <div style="display: flex; align-items: center; color: #E60000; font-size: 40px;"><i class="fas fa-arrow-left"></i></div>
+                <div style="flex: 1; background: linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02)); backdrop-filter: blur(20px); padding: 50px 40px; border-radius: 30px; text-align: center; border: 2px solid rgba(255,215,0,0.3); box-shadow: 0 20px 60px rgba(0,0,0,0.4); position: relative; transition: all 0.4s;">
+                    <div style="position: absolute; top: -25px; left: 50%; transform: translateX(-50%); width: 60px; height: 60px; background: linear-gradient(135deg, #E60000 0%, #990000 100%); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; font-weight: 900; box-shadow: 0 10px 30px rgba(230,0,0,0.6);">2</div>
+                    <div style="width: 140px; height: 140px; background: conic-gradient(from 0deg at 50% 50%, rgba(230,0,0,0.4) 0deg, rgba(150,0,0,0.4) 120deg, rgba(230,0,0,0.4) 240deg, rgba(150,0,0,0.4) 360deg); border-radius: 35px; display: flex; align-items: center; justify-content: center; margin: 30px auto 30px; box-shadow: 0 20px 60px rgba(230,0,0,0.5), 0 0 80px rgba(230,0,0,0.3), inset 0 3px 15px rgba(255,255,255,0.3); position: relative; overflow: hidden; transform: perspective(1000px) rotateY(0deg); transition: all 0.6s;">
+                        <div style="position: absolute; inset: -50%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent); animation: shine 4s linear infinite 1.3s;"></div>
+                        <div style="position: absolute; inset: 0; background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.4), transparent 50%); border-radius: 35px;"></div>
+                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" style="position: relative; z-index: 2; filter: drop-shadow(0 8px 20px rgba(230,0,0,0.6));">
+                            <path d="M7 2v11h3v9l7-12h-4l4-8z" fill="url(#grad2)"/>
+                            <defs><linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#E60000;stop-opacity:1" /><stop offset="100%" style="stop-color:#FFF;stop-opacity:1" /></linearGradient></defs>
+                        </svg>
+                    </div>
+                    <h3 style="font-size: 1.8rem; font-weight: 800; color: white; margin-bottom: 15px; text-shadow: 0 2px 10px rgba(255,215,0,0.3);">استلم فورًا</h3>
+                    <p style="color: rgba(255,255,255,0.8); font-size: 1.1rem; line-height: 1.8;">ادفع بأمان واستلم QR Code فورًا على الموقع</p>
+                </div>
+                <div style="display: flex; align-items: center; color: #E60000; font-size: 40px;"><i class="fas fa-arrow-left"></i></div>
+                <div style="flex: 1; background: linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02)); backdrop-filter: blur(20px); padding: 50px 40px; border-radius: 30px; text-align: center; border: 2px solid rgba(255,215,0,0.3); box-shadow: 0 20px 60px rgba(0,0,0,0.4); position: relative; transition: all 0.4s;">
+                    <div style="position: absolute; top: -25px; left: 50%; transform: translateX(-50%); width: 60px; height: 60px; background: linear-gradient(135deg, #E60000 0%, #990000 100%); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; font-weight: 900; box-shadow: 0 10px 30px rgba(230,0,0,0.6);">3</div>
+                    <div style="width: 140px; height: 140px; background: conic-gradient(from 0deg at 50% 50%, rgba(230,0,0,0.4) 0deg, rgba(150,0,0,0.4) 120deg, rgba(230,0,0,0.4) 240deg, rgba(150,0,0,0.4) 360deg); border-radius: 35px; display: flex; align-items: center; justify-content: center; margin: 30px auto 30px; box-shadow: 0 20px 60px rgba(230,0,0,0.5), 0 0 80px rgba(230,0,0,0.3), inset 0 3px 15px rgba(255,255,255,0.3); position: relative; overflow: hidden; transform: perspective(1000px) rotateY(0deg); transition: all 0.6s;">
+                        <div style="position: absolute; inset: -50%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent); animation: shine 4s linear infinite 2.6s;"></div>
+                        <div style="position: absolute; inset: 0; background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.4), transparent 50%); border-radius: 35px;"></div>
+                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" style="position: relative; z-index: 2; filter: drop-shadow(0 8px 20px rgba(230,0,0,0.6));">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" fill="url(#grad3)"/>
+                            <defs><linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#E60000;stop-opacity:1" /><stop offset="100%" style="stop-color:#FFF;stop-opacity:1" /></linearGradient></defs>
+                        </svg>
+                    </div>
+                    <h3 style="font-size: 1.8rem; font-weight: 800; color: white; margin-bottom: 15px; text-shadow: 0 2px 10px rgba(255,215,0,0.3);">فعّل وانطلق</h3>
+                    <p style="color: rgba(255,255,255,0.8); font-size: 1.1rem; line-height: 1.8;">امسح الرمز وابدأ الاتصال بالعالم في ثوانٍ</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 60px;">
+                <a href="#plans" style="display: inline-flex; align-items: center; gap: 12px; background: linear-gradient(135deg, #E60000 0%, #990000 100%); color: white; padding: 20px 50px; border-radius: 50px; font-size: 1.2rem; font-weight: 800; text-decoration: none; box-shadow: 0 15px 40px rgba(230,0,0,0.5); transition: all 0.4s;">⚡ ابدأ الآن في 3 خطوات</a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2 class="section-title">الأسئلة المتكررة</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>ما هي مدة صلاحية الباقات؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>نوفر باقات متعددة: 5 أشهر، 10 أشهر، 12 شهر، و14 شهر. جميع الباقات مفتوحة بالكامل مع إنترنت غير محدود.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>كم عدد الدول المدعومة؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>تعمل الباقات في 89+ دولة حول العالم عبر 6 قارات، مع تغطية كاملة في أوروبا، آسيا، أمريكا، أفريقيا، وأوقيانوسيا.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>هل الإنترنت غير محدود حقًا؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>نعم، جميع باقاتنا توفر إنترنت غير محدود بسرعة 5G فائقة بدون قيود على الاستخدام.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>هل تشمل الباقات المكالمات والرسائل؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>نعم، جميع الباقات تشمل مكالمات ورسائل مجانية + رقم بريطاني مجاني يمكنك استخدامه في أي مكان.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>هل يدعم Hotspot ومشاركة الإنترنت؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>نعم، جميع باقاتنا تدعم خاصية Hotspot لمشاركة الإنترنت مع أجهزة أخرى بدون قيود.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>كيف يتم الدفع والتفعيل؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>الدفع يتم بـ USDT بشكل آمن. بعد الدفع، تستلم QR Code فورًا على الموقع، تمسحه من إعدادات هاتفك ويتم التفعيل في ثوانٍ.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>هل أحتاج إلى وثائق للتفعيل؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>لا، لا تحتاج إلى جواز سفر أو أي وثائق. التفعيل فوري بدون أي تعقيدات.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>هل يمكن استخدام الباقة على أكثر من جهاز؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>يمكنك نقل الـ eSIM بين الأجهزة باستخدام نفس رمز الـ QR، لكن يعمل على جهاز واحد في نفس الوقت.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" id="buy">
+        <div class="footer-wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25"></path>
+                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"></path>
+            </svg>
+        </div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section footer-brand">
+                    <div class="footer-logo-wrapper">
+                        <img src="IMAGES/ChatGPT Image 6 déc. 2025, 12_45_18.png" alt="eSIM V Pro" class="footer-logo">
+                        <div class="footer-brand-text">
+                            <span class="footer-brand-name"><span class="brand-black">eSIM</span> <span class="brand-red">V Pro</span></span>
+                            <span class="footer-brand-tagline">Powered by Vodafone</span>
+                        </div>
+                    </div>
+                    <p class="footer-description">اتصل بالعالم في ثوانٍ • 89+ دولة • إنترنت غير محدود</p>
+                    <div class="footer-badges">
+                        <div class="footer-badge">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
+                            </svg>
+                            <span>آمن 100%</span>
+                        </div>
+                        <div class="footer-badge">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M7 2v11h3v9l7-12h-4l4-8z"/>
+                            </svg>
+                            <span>تفعيل فوري</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <a href="#features"><i class="fas fa-chevron-left"></i> المزايا</a>
+                    <a href="#plans"><i class="fas fa-chevron-left"></i> الباقات</a>
+                    <a href="pages/countries.html"><i class="fas fa-chevron-left"></i> الدول</a>
+                    <a href="#faq"><i class="fas fa-chevron-left"></i> الأسئلة</a>
+                </div>
+                <div class="footer-section">
+                    <h4>الدعم</h4>
+                    <a href="pages/support.html"><i class="fas fa-chevron-left"></i> مركز المساعدة</a>
+                    <a href="pages/support.html#contact-form"><i class="fas fa-chevron-left"></i> اتصل بنا</a>
+                    <a href="pages/terms.html"><i class="fas fa-chevron-left"></i> الشروط والأحكام</a>
+                    <a href="pages/privacy.html"><i class="fas fa-chevron-left"></i> سياسة الخصوصية</a>
+                </div>
+                <div class="footer-section">
+                    <h4>تابعنا</h4>
+                    <div class="social-links">
+                        <a href="https://t.me/esim_v_pro" target="_blank" title="Telegram">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="https://x.com/esimvpro?t=6AhZvnj1vNaDcOak0BWm6g&s=09" target="_blank" class="x-icon" title="X (Twitter)">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 <strong>eSIM V Pro</strong>. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="pages/terms.html">الشروط</a>
+                    <span>•</span>
+                    <a href="pages/privacy.html">الخصوصية</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="helpModal" class="modal-overlay">
+        <div class="modal-content">
+            <button onclick="document.getElementById('helpModal').style.display='none'" class="modal-close">&times;</button>
+            <h3>مركز المساعدة</h3>
+            <div class="modal-body">
+                <h4>كيف يمكننا مساعدتك؟</h4>
+                <p>نحن هنا لمساعدتك في أي استفسار حول خدمة <span class="brand-black">eSIM</span> <span class="brand-red">V Pro</span>.</p>
+                <ul style="list-style: none; padding: 0; margin: 20px 0;">
+                    <li style="padding: 15px; background: rgba(230,0,0,0.05); border-radius: 10px; margin-bottom: 10px;"><strong>📧 البريد:</strong> support@esimvpro.com</li>
+                    <li style="padding: 15px; background: rgba(230,0,0,0.05); border-radius: 10px; margin-bottom: 10px;"><strong>💬 واتساب:</strong> +44 123 456 7890</li>
+                    <li style="padding: 15px; background: rgba(230,0,0,0.05); border-radius: 10px;"><strong>⏰ ساعات العمل:</strong> 24/7 دعم متواصل</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="contactModal" class="modal-overlay">
+        <div class="modal-content">
+            <button onclick="document.getElementById('contactModal').style.display='none'" class="modal-close">&times;</button>
+            <h3>اتصل بنا</h3>
+            <div class="modal-body">
+                <form style="display: flex; flex-direction: column; gap: 20px;">
+                    <input type="text" placeholder="الاسم" class="modal-input">
+                    <input type="email" placeholder="البريد الإلكتروني" class="modal-input">
+                    <input type="text" placeholder="الموضوع" class="modal-input">
+                    <textarea placeholder="رسالتك..." rows="5" class="modal-input"></textarea>
+                    <button type="submit" class="modal-btn">📤 إرسال الرسالة</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="termsModal" class="modal-overlay">
+        <div class="modal-content" style="max-width: 800px;">
+            <button onclick="document.getElementById('termsModal').style.display='none'" class="modal-close">&times;</button>
+            <h3>الشروط والأحكام</h3>
+            <div class="modal-body" style="max-height: 500px; overflow-y: auto;">
+                <h4>1. قبول الشروط</h4>
+                <p>باستخدام خدمة <span class="brand-black">eSIM</span> <span class="brand-red">V Pro</span>، فإنك توافق على جميع الشروط والأحكام المذكورة.</p>
+                <h4>2. استخدام الخدمة</h4>
+                <p>الخدمة مخصصة للاستخدام الشخصي فقط. يُمنع استخدامها لأغراض تجارية دون إذن مسبق.</p>
+                <h4>3. الباقات والأسعار</h4>
+                <p>جميع الأسعار بالدولار الأمريكي (USDT). الباقات غير قابلة للاسترداد بعد التفعيل.</p>
+                <h4>4. التفعيل</h4>
+                <p>يتم التفعيل فورًا بعد الدفع. صلاحية الباقة تبدأ من تاريخ التفعيل.</p>
+                <h4>5. المسؤولية</h4>
+                <p>نحن غير مسؤولين عن أي انقطاع في الخدمة ناتج عن ظروف خارجة عن إرادتنا.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="privacyModal" class="modal-overlay">
+        <div class="modal-content" style="max-width: 800px;">
+            <button onclick="document.getElementById('privacyModal').style.display='none'" class="modal-close">&times;</button>
+            <h3>سياسة الخصوصية</h3>
+            <div class="modal-body" style="max-height: 500px; overflow-y: auto;">
+                <h4>1. جمع المعلومات</h4>
+                <p>نقوم بجمع المعلومات الضرورية فقط لتقديم الخدمة (الاسم، البريد الإلكتروني، معلومات الدفع).</p>
+                <h4>2. استخدام المعلومات</h4>
+                <p>نستخدم معلوماتك فقط لتفعيل الخدمة وتقديم الدعم الفني. لن نشارك بياناتك مع أطراف ثالثة.</p>
+                <h4>3. حماية البيانات</h4>
+                <p>نستخدم أحدث تقنيات التشفير لحماية بياناتك الشخصية والمالية.</p>
+                <h4>4. ملفات تعريف الارتباط</h4>
+                <p>نستخدم ملفات تعريف الارتباط لتحسين تجربة المستخدم وتحليل استخدام الموقع.</p>
+                <h4>5. حقوقك</h4>
+                <p>يمكنك طلب حذف أو تعديل بياناتك في أي وقت عبر التواصل معنا.</p>
+            </div>
+        </div>
+    </div>
+
+    <style>
+    .modal-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.85);
+        backdrop-filter: blur(10px);
+        z-index: 9999;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        overflow-y: auto;
+        animation: fadeIn 0.3s;
+    }
+    .modal-content {
+        background: linear-gradient(145deg, #ffffff, #f8f8f8);
+        border-radius: 25px;
+        padding: 40px 35px;
+        max-width: 600px;
+        width: 100%;
+        box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+        position: relative;
+        animation: slideUp 0.4s;
+        margin: auto;
+    }
+    .modal-close {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: rgba(230,0,0,0.1);
+        border: none;
+        color: #E60000;
+        font-size: 24px;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+    .modal-close:hover {
+        background: #E60000;
+        color: white;
+        transform: rotate(90deg);
+    }
+    .modal-content h3 {
+        font-size: 2rem;
+        font-weight: 900;
+        color: #1a1a1a;
+        margin-bottom: 10px;
+        padding-bottom: 15px;
+        border-bottom: 3px solid #E60000;
+    }
+    .modal-content h4 {
+        font-size: 1.2rem;
+        font-weight: 800;
+        color: #E60000;
+        margin: 20px 0 10px;
+    }
+    .modal-body {
+        color: #666;
+        line-height: 1.8;
+    }
+    .modal-input {
+        width: 100%;
+        padding: 15px 20px;
+        border: 2px solid rgba(230,0,0,0.2);
+        border-radius: 12px;
+        font-size: 1rem;
+        transition: all 0.3s;
+        background: white;
+        font-family: inherit;
+    }
+    .modal-input:focus {
+        outline: none;
+        border-color: #E60000;
+        box-shadow: 0 0 0 4px rgba(230,0,0,0.1);
+    }
+    .modal-btn {
+        background: linear-gradient(135deg, #E60000 0%, #990000 100%);
+        color: white;
+        padding: 15px;
+        border-radius: 12px;
+        font-size: 1.1rem;
+        font-weight: 800;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 8px 25px rgba(230,0,0,0.4);
+        transition: all 0.3s;
+    }
+    .modal-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 35px rgba(230,0,0,0.6);
+    }
+    @media (max-width: 768px) {
+        .modal-content {
+            padding: 30px 20px !important;
+            border-radius: 20px !important;
+        }
+        .modal-content h3 {
+            font-size: 1.5rem !important;
+        }
+    }
+    </style>
+
+    <!-- Auth Modal -->
+    <div id="authModal" class="auth-modal">
+        <div class="auth-modal-content">
+            <button onclick="closeAuthModal()" class="auth-close">&times;</button>
+            <div class="auth-header">
+                <div class="auth-logo">
+                    <img src="IMAGES/ChatGPT Image 6 déc. 2025, 12_45_18.png" alt="eSIM V Pro">
+                </div>
+                <h2><span style="color: #1a1a1a;">eSIM</span> <span style="color: #E60000;">V Pro</span></h2>
+                <p style="font-size: 1.05rem; font-weight: 700; color: #1a1a1a; margin-bottom: 6px; line-height: 1.4;">⚡ اتصل بالعالم في ثوانٍ • بدون عقود أو قيود</p>
+                <p style="font-size: 0.8rem; color: #666; margin-bottom: 4px;">🌍 15,000+ عميل في 89 دولة يستخدمون خدمتنا يومياً</p>
+            </div>
+            <div class="auth-tabs">
+                <button id="loginTab" class="auth-tab active" onclick="showLogin()">تسجيل الدخول</button>
+                <button id="registerTab" class="auth-tab" onclick="showRegister()">إنشاء حساب</button>
+            </div>
+            <div class="auth-body">
+                <div id="loginForm" class="auth-form">
+                    <form id="loginFormElement">
+                        <div class="auth-input-group">
+                            <label class="auth-input-label">البريد الإلكتروني</label>
+                            <input type="email" id="loginEmail" class="auth-input" placeholder="example@email.com" autocomplete="email" name="email" required>
+                            <i class="fas fa-envelope auth-input-icon"></i>
+                        </div>
+                        <div class="auth-input-group">
+                            <label class="auth-input-label">كلمة المرور</label>
+                            <input type="password" id="loginPassword" class="auth-input" placeholder="••••••••" autocomplete="current-password" name="password" required>
+                            <i class="fas fa-lock auth-input-icon"></i>
+                        </div>
+                        <button type="submit" class="auth-submit"><i class="fas fa-sign-in-alt"></i> تسجيل الدخول</button>
+                    </form>
+                </div>
+                <div id="registerForm" class="auth-form" style="display: none;">
+                    <form id="registerFormElement">
+                        <div class="auth-input-group">
+                            <label class="auth-input-label">الاسم الكامل</label>
+                            <input type="text" id="registerName" class="auth-input" placeholder="أدخل اسمك الكامل" autocomplete="name" name="name" required>
+                            <i class="fas fa-user auth-input-icon"></i>
+                        </div>
+                        <div class="auth-input-group">
+                            <label class="auth-input-label">البريد الإلكتروني</label>
+                            <input type="email" id="registerEmail" class="auth-input" placeholder="example@email.com" autocomplete="email" name="email" required>
+                            <i class="fas fa-envelope auth-input-icon"></i>
+                        </div>
+                        <div class="auth-input-group">
+                            <label class="auth-input-label">الدولة</label>
+                            <select id="registerCountry" class="auth-input" name="country" required style="padding-right: 45px;">
+                                <option value="">اختر دولتك</option>
+                            </select>
+                            <i class="fas fa-globe auth-input-icon"></i>
+                        </div>
+                        <div class="auth-input-group">
+                            <label class="auth-input-label">كلمة المرور</label>
+                            <input type="password" id="registerPassword" class="auth-input" placeholder="••••••••" autocomplete="new-password" name="password" required>
+                            <i class="fas fa-lock auth-input-icon"></i>
+                        </div>
+                        <button type="submit" class="auth-submit"><i class="fas fa-user-plus"></i> إنشاء حساب جديد</button>
+                    </form>
+                </div>
+            </div>
+            <div class="auth-footer">
+                <p>بالمتابعة، أنت توافق على <a href="pages/terms.html">الشروط والأحكام</a> و <a href="pages/privacy.html">سياسة الخصوصية</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI Support System Scripts -->
+    <script src="js/payment-modal.js"></script>
+    <script src="js/ai-support-system.js"></script>
+    <script src="js/analytics-tracker.js"></script>
+    <script src="js/ai-chatbot-ui.js"></script>
+    <script src="js/testimonials-final.js"></script>
+    <script src="script.js"></script>
+    <script src="js/auth-modal.js"></script>
+
+</body>
+</html>
