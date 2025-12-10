@@ -1,0 +1,16 @@
+/* RTL Fixes */
+.nav-content {
+    flex-direction: row-reverse;
+}
+
+.nav-links {
+    flex-direction: row-reverse;
+}
+
+.footer-content {
+    direction: rtl;
+}
+
+.social-links {
+    flex-direction: row-reverse;
+}
